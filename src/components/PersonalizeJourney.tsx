@@ -120,11 +120,20 @@ const PersonalizeJourney = () => {
   
   return (
     <div className="section-container">
-      <div className="section-title">
+      <motion.div 
+        className="section-title"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
         <h2>Personalize Your Journey</h2>
-      </div>
+        <p className="text-gray-600 max-w-2xl mx-auto mt-2">
+          Tell us about your project, and we'll customize our approach to fit your specific needs.
+        </p>
+      </motion.div>
       
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-2xl mx-auto mt-12">
         <div className="flex justify-between mb-8">
           {formSteps.map((_, index) => (
             <div 
@@ -148,7 +157,7 @@ const PersonalizeJourney = () => {
           <div className="flex justify-between mt-8">
             <button
               onClick={prevStep}
-              className={`px-6 py-2 rounded-lg ${step === 0 ? 'invisible' : 'bg-gray-200 hover:bg-gray-300'}`}
+              className={`px-6 py-2 rounded-lg transition-colors ${step === 0 ? 'invisible' : 'bg-gray-200 hover:bg-gray-300'}`}
             >
               Back
             </button>
@@ -156,11 +165,20 @@ const PersonalizeJourney = () => {
             <button
               onClick={nextStep}
               disabled={!isFormStepComplete()}
-              className={`px-6 py-2 rounded-lg ${isFormStepComplete() ? 'bg-brand-primary text-white hover:bg-opacity-90' : 'bg-gray-200 text-gray-500 cursor-not-allowed'}`}
+              className={`px-6 py-2 rounded-lg transition-colors ${isFormStepComplete() ? 'bg-brand-primary text-white hover:bg-opacity-90' : 'bg-gray-200 text-gray-500 cursor-not-allowed'}`}
             >
               {step < formSteps.length - 1 ? 'Next' : 'Build Your Project'}
             </button>
           </div>
+        </motion.div>
+        
+        <motion.div
+          className="mt-6 text-center text-gray-500 text-sm"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          After completing this form, you'll be able to drag and drop components to build your project.
         </motion.div>
       </div>
     </div>

@@ -7,6 +7,8 @@ import IdeaToImpact from '../components/IdeaToImpact';
 import ServiceWheel from '../components/ServiceWheel';
 import PortfolioHighlight from '../components/PortfolioHighlight';
 import PersonalizeJourney from '../components/PersonalizeJourney';
+import InteractiveDemo from '../components/InteractiveDemo';
+import LetsBuildTogether from '../components/LetsBuildTogether';
 
 const Index = () => {
   return (
@@ -15,67 +17,10 @@ const Index = () => {
       <Hero />
       <IdeaToImpact />
       <ServiceWheel />
-      
-      {/* Interactive Demo Section */}
-      <div className="section-container">
-        <div className="section-title">
-          <h2>See AI & SaaS In Action</h2>
-        </div>
-        
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          {[
-            {
-              label: "Smart Booking Flow",
-              description: "Auto-filled garages, slots & map routes",
-              preview: "https://images.unsplash.com/photo-1615840287214-7ff58936c4cf?w=800&auto=format&fit=crop"
-            },
-            {
-              label: "AI Content Generator",
-              description: "Generate posts using GPT and schedule them",
-              preview: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&auto=format&fit=crop"
-            },
-            {
-              label: "3D Viewer + Configurator",
-              description: "Live rotate and change shoe or product colors",
-              preview: "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=800&auto=format&fit=crop"
-            }
-          ].map((demo, index) => (
-            <motion.div
-              key={index}
-              className="service-card overflow-hidden"
-              whileHover={{ y: -5, boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)' }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="h-48 overflow-hidden">
-                <img 
-                  src={demo.preview} 
-                  alt={demo.label} 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{demo.label}</h3>
-                <p className="text-gray-600">{demo.description}</p>
-                <button className="mt-4 bg-brand-secondary text-brand-text px-4 py-2 rounded hover:bg-opacity-90 transition">
-                  Try Demo
-                </button>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-      
+      <InteractiveDemo />
       <PortfolioHighlight />
       <PersonalizeJourney />
+      <LetsBuildTogether />
       
       {/* Service Badges */}
       <div className="section-container">
@@ -92,7 +37,7 @@ const Index = () => {
             "Workflow Automation",
             "3D Web Experiences",
             "UI/UX Design",
-            "Video Production"
+            "3D Animation"
           ].map((service, index) => (
             <motion.div
               key={index}
