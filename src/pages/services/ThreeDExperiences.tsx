@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Cube, Eye, RotateCw, PenTool, Laptop, Film } from 'lucide-react';
+import { Package, Eye, RotateCw, PenTool, Laptop, Film } from 'lucide-react';
 import Navbar from '../../components/Navbar';
 
 const ThreeDExperiences = () => {
@@ -74,7 +73,7 @@ const ThreeDExperiences = () => {
             >
               <div className="flex items-center mb-4">
                 <div className="bg-brand-secondary bg-opacity-20 p-3 rounded-full mr-4">
-                  <Cube className="text-brand-primary" size={24} />
+                  <Package className="text-brand-primary" size={24} />
                 </div>
                 <h3 className="text-xl font-bold">3D Product Modeling</h3>
               </div>

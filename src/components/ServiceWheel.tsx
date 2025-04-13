@@ -7,7 +7,7 @@ import {
   Smartphone, 
   Cloud, 
   Brain, 
-  Cube, 
+  Package, 
   Film
 } from 'lucide-react';
 
@@ -42,7 +42,7 @@ const services = [
   },
   {
     title: "3D Design",
-    icon: <Cube size={32} />,
+    icon: <Package size={32} />,
     desc: "WebGL, product mockups",
     color: "#FFD580",
     path: "/services/3d-experiences"

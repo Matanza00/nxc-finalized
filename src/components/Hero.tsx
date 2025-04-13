@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Brain, Smartphone, Code, Cloud, Cube } from 'lucide-react';
+import { Brain, Smartphone, Code, Cloud, Package } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -96,7 +96,7 @@ const Hero = () => {
               transition: { repeat: Infinity, duration: 4, ease: "easeInOut" }
             }}
           >
-            <Cube size={24} className="text-brand-primary" />
+            <Package size={24} className="text-brand-primary" />
           </motion.div>
         </div>
       </div>
