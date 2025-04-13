@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -11,6 +10,7 @@ import MobileApps from "./pages/services/MobileApps";
 import SaasPlatforms from "./pages/services/SaasPlatforms";
 import AIIntegration from "./pages/services/AIIntegration";
 import ThreeDExperiences from "./pages/services/ThreeDExperiences";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -27,7 +27,7 @@ const App = () => (
           <Route path="/services/saas-platforms" element={<SaasPlatforms />} />
           <Route path="/services/ai-integration" element={<AIIntegration />} />
           <Route path="/services/3d-experiences" element={<ThreeDExperiences />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
