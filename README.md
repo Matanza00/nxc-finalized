@@ -1,6 +1,7 @@
-# Welcome to your project
+# Welcome to the project
 
 ## Project info
+https://NXCSOL.com
 
 ## How can I edit this code?
 
@@ -53,13 +54,12 @@ This project is built with:
 - Tailwind CSS
 
 ## How can I deploy this project?
+npm run build . 
+1. Deploy on Vercel directly from github. (https://www.youtube.com/watch?v=eJBQqzXmTeM)
 
-Simply open [Lovable](https://lovable.dev/projects/a34a7369-3ed5-4cbe-a9df-98eb230daaef) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
+## Can I connect a custom domain to my project?
 
 Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Deploy on Hostinger any hosting website . 
+Use your domain DNS and update your hosting panel with that DNS . 
+Open the CPanel for it , go File Manager > Public . Inside Public upload the folder named "dist" in your project directory. "Dist" folder will only appear after running the above command.
